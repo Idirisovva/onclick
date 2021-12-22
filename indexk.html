@@ -1,0 +1,29 @@
+<div id="calculate">
+    enter weight in kg: <input type="text" id="a" width=”30”><br> enter height in cm: <input type="text" id="b"><br> your result is:
+    <p id="result">0</p>you are:
+    <p id='fat'>wait!</p>
+    <button onclick="mult()">calculate!</button>
+</div>
+
+<script>
+    function mult() {
+        var x = document.getElementById("a").value;
+        var y = document.getElementById("b").value;
+        var res = x / y ** 2
+        document.getElementById("result").innerHTML = res;
+        if (res < 18.5) {
+            document.getElementById("fat").innerHTML = 'underweight'
+        } 
+        else if (18.5 < res < 24.9) {
+            document.getElementById("fat").innerHTML = 'normal'
+        } 
+        else if (24.9 < res < 29.9) {
+            document.getElementById("fat").innerHTML = 'overweight'
+        } 
+        else if (res > 29.9) {
+            document.getElementById("fat").innerHTML = 'Very overweiht'
+        }
+    }
+</script>
+ 
+
